@@ -8,33 +8,24 @@
             <div class="collapse navbar-collapse" id="nav-tabis">
                 <ul class="isop-filter nav nav-pills">
                     <li role="presentation" class="active">
-                        <!--<a href="#about-me" aria-controls="about-me" role="tab" data-toggle="tab"><i class="icon-user"></i> ABOUT ME</a>-->
                         <router-link to="/" ><i class="icon-user"></i> ABOUT ME</router-link>
                     </li>
                     <li role="presentation">
-                        <!--<a href="#resume" aria-controls="resume" role="tab" data-toggle="tab"><i class="icon-book-open"></i>RESUME</a>-->
-                        <router-link to="/" ><i class="icon-book-open"></i>RESUME</router-link>
+                        <router-link to="/resume" ><i class="icon-book-open"></i>RESUME</router-link>
                     </li>
                     <li role="presentation">
-                        <!--<a href="#portfolio" aria-controls="portfolio" role="tab" data-toggle="tab">-->
-                        <!--<i class="icon-rocket"></i>PORTFOLIO</a>-->
 
-                        <router-link to="/" ><i class="icon-rocket"></i>PORTFOLIO</router-link>
+                        <router-link to="/portfolio" ><i class="icon-rocket"></i>PORTFOLIO</router-link>
                     </li>
                     <li role="presentation">
-                        <!--<a href="#blog" aria-controls="blog" role="tab" data-toggle="tab"><i class="icon-note"></i>BLOG</a>-->
-                        <router-link to="/" ><i class="icon-note"></i>BLOG</router-link>
+                        <router-link to="/blog" ><i class="icon-note"></i>BLOG</router-link>
                     </li>
                     <li role="presentation">
-                        <!--<a href="#contact" aria-controls="contact" role="tab" data-toggle="tab"> <i class="icon-pencil"></i>CONTACT ME</a>-->
-                        <router-link to="/" > <i class="icon-pencil"></i>CONTACT ME</router-link>
+                        <router-link to="/contact-me" > <i class="icon-pencil"></i>CONTACT ME</router-link>
                     </li>
                 </ul>
             </div>
         </nav>
-
-
-
 
     </div>
 </template>
