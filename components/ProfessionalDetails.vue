@@ -1,55 +1,35 @@
 <template>
-    <div>
-
+    <div id="professional-div">
 
             <!-- Professional Details -->
             <h5 class="tittle">Professional Details</h5>
             <img src="../assets/images/avatar.jpg" class="img-responsive" alt="">
             <ul class="personal-info">
                 <li>
-                    <p> <span> Name</span> John Doe </p>
+                    <p> <span> Name</span> {{ WebSiteData.my_details[0].full_name }} </p>
                 </li>
                 <li>
-                    <p> <span> Age</span> 38 Years </p>
+                    <p> <span> Location</span> {{ WebSiteData.my_details[0].location }} </p>
                 </li>
                 <li>
-                    <p> <span> Location</span> Rome, Italy </p>
+                    <p> <span> Experience</span> {{ WebSiteData.my_details[0].experience }} </p>
                 </li>
                 <li>
-                    <p> <span> Experience</span> 15 Years </p>
+                    <p> <span> Degree</span> {{ WebSiteData.my_details[0].degree }} </p>
                 </li>
                 <li>
-                    <p> <span> Degree</span> MBA </p>
+                    <p> <span> Career Level</span> {{ WebSiteData.my_details[0].career_level }} </p>
+                </li>
+
+
+                <li>
+                    <p> <span> E-mail</span> <a href="#."> {{ WebSiteData.my_details[0].email }}</a> </p>
                 </li>
                 <li>
-                    <p> <span> Career Level</span> Mid-Level </p>
-                </li>
-                <li>
-                    <p> <span> Phone</span> (800) 123-4567 </p>
-                </li>
-                <li>
-                    <p> <span> FAX</span> (800) 123-4568 </p>
-                </li>
-                <li>
-                    <p> <span> E-mail</span> <a href="#."> example@example.com</a> </p>
-                </li>
-                <li>
-                    <p> <span> Website</span><a href="#."> example.com </a></p>
+                    <p> <span> Website</span><a href="#."> {{ WebSiteData.my_details[0].website }} </a></p>
                 </li>
             </ul>
 
-            <!-- Attachments -->
-            <h5 class="tittle">Attachments</h5>
-            <div class="attach bor-btm padding-25">
-                <ul>
-                    <li>
-                        <p><img src="../assets/images/pdf-icon.jpg" alt="" > Curriculum-Vitae.pdf <a href="#."><i class="fa fa-cloud-download"></i></a> <a href="#."><i class="fa fa-eye"></i></a></p>
-                    </li>
-                    <li>
-                        <p><img src="../assets/images/word-icon.jpg" alt="" > COE.docx <a href="#."><i class="fa fa-cloud-download"></i></a> <a href="#."><i class="fa fa-eye"></i></a></p>
-                    </li>
-                </ul>
-            </div>
 
             <!-- Social Profiles -->
             <h5 class="tittle">Social Profiles</h5>
@@ -99,8 +79,10 @@
 </template>
 
 <script>
+
     export default {
-        name: "ProfessionalDetail"
+        name: "ProfessionalDetail",
+        props: ['WebSiteData']
     }
 </script>
 

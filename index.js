@@ -6,15 +6,16 @@ import Resume from './components/_partials/Resume.vue';
 import Portfolio from './components/_partials/Portfolio.vue';
 import Blog from './components/_partials/Blog.vue';
 import ContactMe from './components/_partials/ContactMe.vue';
+import WebSiteData from './data';
 
 Vue.use(VueRouter);
 
 const routes = [
-    { path: '/', component: AboutMe },
-    { path: '/resume', component: Resume },
-    { path: '/portfolio', component: Portfolio },
-    { path: '/blog', component: Blog },
-    { path: '/contact-me', component: ContactMe },
+    { path: '/', component: AboutMe, props: { WebSiteData } },
+    { path: '/resume', component: Resume, props: { WebSiteData }  },
+    { path: '/portfolio', component: Portfolio, props: { WebSiteData }  },
+    { path: '/blog', component: Blog , props: { WebSiteData } },
+    { path: '/contact-me', component: ContactMe, props: { WebSiteData }  },
 ]
 
 

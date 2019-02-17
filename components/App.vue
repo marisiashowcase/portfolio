@@ -29,7 +29,7 @@
                                 <div class="side-bar">
 
                                     <!-- Professional Details -->
-                                <professional-detail></professional-detail>
+                                <professional-detail :WebSiteData="WebSiteData"></professional-detail>
 
                                 </div>
                             </div>
@@ -49,11 +49,18 @@
 
 <script>
 
+    import WebSiteData from '../data';
     import ProfessionalDetail from "./ProfessionalDetails.vue";
     import Navigation from "./Navigation.vue";
 
+
     export default {
         name: "App",
+        data: function(){
+            return {
+                WebSiteData
+            }
+        },
         components: {
             ProfessionalDetail,
             Navigation
