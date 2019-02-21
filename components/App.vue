@@ -18,7 +18,7 @@
                         </div>
 
                         <!-- NAV LINKS -->
-                        <navigation></navigation>
+                        <navigation :WebSiteData="WebSiteData"></navigation>
                         <!-- NAV LINKS END -->
 
                         <!-- Resume -->

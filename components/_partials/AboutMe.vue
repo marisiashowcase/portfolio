@@ -4,7 +4,7 @@
         <div class="tab-content">
 
             <!-- ABOUT ME -->
-            <div role="tabpanel" class="tab-pane fade in active" id="about-me">
+            <div role="tabpanel" :class="showPage" id="about-me">
                 <div class="inside-sec">
                     <!-- BIO AND SKILLS -->
                     <h5 class="tittle">About Me</h5>
@@ -19,6 +19,47 @@
                                 {{ WebSiteData.about_me[0].main_paragraph }}
 
                             </p>
+                        </div>
+
+                        <!-- Skills -->
+                        <h5 class="tittle">Skills</h5>
+
+                        <div class="row padding-20 margin-bottom-10">
+
+                            <!-- Icon -->
+                            <div class="col-md-4 ">
+                                <div class="icon-box i-large ib-black">
+
+                                    <div class="ib-info ">
+
+                                        <h4 class="h6 text-left margin-left-40" v-for="value in WebSiteData.about_me[0].skills.slice(0, 4)">{{ value.title }}</h4>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 ">
+                                <div class="icon-box i-large ib-black">
+
+                                    <div class="ib-info ">
+
+                                        <h4 class="h6 text-left margin-left-40" v-for="value in WebSiteData.about_me[0].skills.slice(4, 8)">{{ value.title }}</h4>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 ">
+                                <div class="icon-box i-large ib-black">
+
+                                    <div class="ib-info ">
+
+                                        <h4 class="h6 text-left margin-left-40" v-for="value in WebSiteData.about_me[0].skills.slice(8, 12)">{{ value.title }}</h4>
+
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
 
                         <!-- Services -->
@@ -59,44 +100,8 @@
                                 </div>
 
                         </div>
-
-                        <!-- Skills -->
-                        <h5 class="tittle">Skills</h5>
-
-                        <!-- Sound Engineering -->
-                        <div class="panel-group accordion padding-20" id="accordion">
-
-                            <div v-for="value in WebSiteData.about_me[0].skills">
-
-                                <div class="panel panel-default">
-                                    <div class="row">
-                                        <div class="col-sm-4">
-                                            <!-- PANEL HEADING -->
-                                            <div class="panel-heading">
-                                                <h4 class="panel-title"> <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" class="collapsed"> {{ value.title}}</a> </h4>
-                                            </div>
-                                        </div>
-
-                                        <!-- Skillls Bars -->
-                                        <div class="col-sm-8">
-                                            <div class="progress">
-                                                <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 80%;"> <span class="sr-only">{{ value.percent }}% Complete</span> </div>
-                                            </div>
-
-                                            <!-- Skillls Text -->
-                                            <div id="collapseOne" class="panel-collapse collapse">
-                                                <div class="panel-body">
-                                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin nibh augue, suscipit a, scelerisque sed, lacinia in, mi. Cras vel lorem.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-
-
                         </div>
+
                     </section>
                 </div>
             </div>
@@ -107,9 +112,25 @@
 </template>
 
 <script>
+
+    import { EventBus } from '../../assets/js/event-bus.js';
+
     export default {
         name: "AboutMe",
-        props: ['WebSiteData']
+        props: ['WebSiteData'],
+        data: function () {
+
+            return {
+                showPage: 'tab-pane fade in active'
+            }
+        },
+        created() {
+
+            EventBus.$on('pageStatusCheck', (data) => {
+
+                this.showPage = data.about_me? 'tab-pane fade in active':'tab-pane fade in '
+            });
+        }
     }
 </script>
 

@@ -1,11 +1,11 @@
 <template>
-    <div class="col-md-8">
+    <div class="col-md-8" >
 
         <!-- Professional Experience -->
         <div class="inside-sec ">
             <!-- Professional Experience -->
             <h5 class="tittle">Professional Experience</h5>
-            <div class="padding-30 exp-history" v-for="value in WebSiteData.resume[0].jobs" >
+            <div class="exp-history-padding exp-history" v-for="value in WebSiteData.resume[0].jobs" >
 
                 <!-- Wordpress Developer -->
                 <div class="exp">
@@ -61,9 +61,25 @@
 </template>
 
 <script>
+
+    import { EventBus } from '../../assets/js/event-bus.js';
+
     export default {
         props: ['WebSiteData'],
-        name: "Resume"
+        name: "Resume",
+        data: function () {
+
+            return {
+                showPage: 1
+            }
+        },
+        created() {
+
+            EventBus.$on('pageStatusCheck', (data) => {
+
+                this.showPage = data.resume? 1:0
+            });
+        }
     }
 </script>
 

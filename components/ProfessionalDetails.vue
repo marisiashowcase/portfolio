@@ -2,8 +2,12 @@
     <div id="professional-div">
 
             <!-- Professional Details -->
-            <h5 class="tittle">Professional Details</h5>
-            <img src="../assets/images/avatar.jpg" class="img-responsive" alt="">
+            <h5 class="tittle">Professional Details  <i class="fa fa-plus  hide-show-btn" aria-hidden="true" v-if="!hideProfessionalBtn" v-on:click="toggleProfessionalDiv"></i>
+            <i class="fa fa-minus hide-show-btn " aria-hidden="true" v-if="hideProfessionalBtn" v-on:click="toggleProfessionalDiv"></i></h5>
+
+        <div :class="divProfessionalClass">
+
+            <img src="../assets/images/avatar-4.jpg" class="img-responsive" alt="">
             <ul class="personal-info">
                 <li>
                     <p> <span> Name</span> {{ WebSiteData.my_details[0].full_name }} </p>
@@ -21,25 +25,14 @@
                     <p> <span> Career Level</span> {{ WebSiteData.my_details[0].career_level }} </p>
                 </li>
 
-
-                <li>
-                    <p> <span> E-mail</span> <a href="#."> {{ WebSiteData.my_details[0].email }}</a> </p>
-                </li>
-                <li>
-                    <p> <span> Website</span><a href="#."> {{ WebSiteData.my_details[0].website }} </a></p>
-                </li>
             </ul>
 
 
             <!-- Social Profiles -->
             <h5 class="tittle">Social Profiles</h5>
             <div class="social-icon bor-btm padding-25">
-                <ul>
-                    <li> <a href="#."> <i class="fa fa-facebook"></i></a> </li>
-                    <li> <a href="#."> <i class="fa fa-google"></i></a> </li>
-                    <li> <a href="#."> <i class="fa fa-twitter"></i></a> </li>
-                    <li> <a href="#."> <i class="fa fa-linkedin"></i></a> </li>
-                    <li> <a href="#."> <i class="fa fa-skype"></i></a> </li>
+                <ul >
+                    <li v-for="value in WebSiteData.about_me[0].social" > <a :href="value.link" target="_blank"> <i :class="value.icon"></i></a> </li>
                 </ul>
             </div>
 
@@ -67,23 +60,67 @@
                                 <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
                             </label>
                         </li>
-                        <li class="col-sm-12">
-                            <button type="submit"  value="submit" id="btn_submit" onClick="proceed();">Send Message</button>
+
+
+
+                            <li class="col-sm-12">
+
+                                <vue-recaptcha sitekey="Your key here">
+                                    <button type="submit"  value="submit" id="btn_submit" onClick="proceed();">Send Message</button>
+
+                                </vue-recaptcha>
+
+
                         </li>
                     </ul>
                 </form>
             </div>
 
-
+        </div>
     </div>
 </template>
 
 <script>
 
+    import VueRecaptcha from 'vue-recaptcha';
+
     export default {
         name: "ProfessionalDetail",
-        props: ['WebSiteData']
+        props: ['WebSiteData'],
+        data:function(){
+            return {
+                hideProfessionalBtn: 0,
+                divProfessionalClass: ' professional-div-display '
+            }
+        },
+        mounted: function () {
+            window.addEventListener('resize', this.handleResize)
+        },
+        beforeDestroy: function () {
+            window.removeEventListener('resize', this.handleResize)
+        },
+        components: {
+            VueRecaptcha
+        },
+        methods: {
+            sendMessage: function(){
+                alert('hi there');
+            },
+            toggleProfessionalDiv: function(){
+
+                this.hideProfessionalBtn = this.hideProfessionalBtn?0:1;
+
+                this.divProfessionalClass = this.hideProfessionalBtn?' ':' professional-div-display d-none';
+            },
+            handleResize: function() {
+                this.hideProfessionalBtn = document.documentElement.clientHeight>990?0:1 ;
+            }
+        }
+
     }
+
+
+
 </script>
 
 <style scoped>

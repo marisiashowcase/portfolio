@@ -86,3 +86,30 @@
 }
 @media(max-height: 700px) {
 }
+
+#avatar-img, #social-profile, .hide-show-btn{
+	display:block;
+	float:right;
+}
+
+.hide-show-btn{
+	display:none;
+}
+
+.professional-div-display{
+	display: block;
+}
+
+@media(max-width: 990px) {
+	#avatar-img, #social-profile{
+		display:none;
+	}
+	.hide-show-btn{
+		display:block;
+	}
+
+	.professional-div-display{
+		display: none;
+	}
+}
+

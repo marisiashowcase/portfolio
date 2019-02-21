@@ -12,10 +12,9 @@
                 <!-- Work Filter -->
                 <ul class="tabs portfolio-filter text-center margin-bottom-30">
                     <li class="filter" data-filter="all">all</li>
-                    <li class="filter" data-filter=".brand">Branding</li>
-                    <li class="filter" data-filter=".design">designing</li>
-                    <li class="filter" data-filter=".photo">photography</li>
-                    <li class="filter" data-filter=".visual">visual design</li>
+                    <li class="filter" data-filter=".brand">GitHub Access</li>
+                    <li class="filter" data-filter=".design">Front End</li>
+                    <li class="filter" data-filter=".photo">BackEnd</li>
                 </ul>
 
                 <!-- PORTFOLIO ITEMS -->
