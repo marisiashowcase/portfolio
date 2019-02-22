@@ -65,7 +65,7 @@
 
                             <li class="col-sm-12">
 
-                                <vue-recaptcha sitekey="Your key here">
+                                <vue-recaptcha :sitekey="sitekey">
                                     <button type="submit"  value="submit" id="btn_submit" onClick="proceed();">Send Message</button>
 
                                 </vue-recaptcha>
@@ -90,7 +90,8 @@
         data:function(){
             return {
                 hideProfessionalBtn: 0,
-                divProfessionalClass: ' professional-div-display '
+                divProfessionalClass: ' professional-div-display ',
+                sitekey: '6LepIJMUAAAAAAjWbejekZ4RSRwg62MR0SzBPZg6'
             }
         },
         mounted: function () {
@@ -100,7 +101,7 @@
             window.removeEventListener('resize', this.handleResize)
         },
         components: {
-            VueRecaptcha
+            'vue-recaptcha': VueRecaptcha
         },
         methods: {
             sendMessage: function(){
@@ -114,6 +115,18 @@
             },
             handleResize: function() {
                 this.hideProfessionalBtn = document.documentElement.clientHeight>990?0:1 ;
+            },
+            onSubmit: function () {
+                this.$refs.invisibleRecaptcha.execute()
+            },
+            onVerify: function (response) {
+                console.log('Verify: ' + response)
+            },
+            onExpired: function () {
+                console.log('Expired')
+            },
+            resetRecaptcha () {
+                this.$refs.recaptcha.reset() // Direct call reset method
             }
         }
 
