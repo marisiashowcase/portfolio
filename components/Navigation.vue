@@ -7,23 +7,23 @@
                 <span class="fa fa-navicon icon-nav"  ></span></button>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div :class="className" id="nav-tabis">
-                <ul class="isop-filter nav nav-pills">
-                    <li role="presentation" class="active" v-on:click="toggleExpanded('about-me')">
+                <ul class="isop-filter nav nav-pills modifywidth">
+                    <li role="presentation" class=" active" v-on:click="toggleExpanded('about-me')">
                         <router-link to="/" ><i class="icon-user"></i> ABOUT ME</router-link>
                     </li>
                     <li role="presentation" v-on:click="toggleExpanded('resume')">
-                        <router-link to="/resume" ><i class="icon-book-open"></i>RESUME</router-link>
+                        <router-link to="/resume" ><i class="icon-book-open"></i>EXPERIENCE</router-link>
                     </li>
                     <li role="presentation" v-on:click="toggleExpanded('portfolio')">
 
                         <router-link to="/portfolio" ><i class="fa fa-briefcase"></i>PORTFOLIO</router-link>
                     </li>
-                    <li role="presentation" v-on:click="toggleExpanded">
-                        <a :href="WebSiteData.about_me[0].social[0].link" target="_blank"><i :class="WebSiteData.about_me[0].social[0].icon"></i>GitHub</a>
-                    </li>
-                    <li role="presentation" v-on:click="toggleExpanded">
-                        <a :href="WebSiteData.about_me[0].social[1].link" target="_blank"><i :class="WebSiteData.about_me[0].social[1].icon"></i>LinkedIn</a>
-                    </li>
+                    <!--<li role="presentation" v-on:click="toggleExpanded">-->
+                        <!--<a :href="WebSiteData.about_me[0].social[0].link" target="_blank"><i :class="WebSiteData.about_me[0].social[0].icon"></i>GitHub</a>-->
+                    <!--</li>-->
+                    <!--<li role="presentation" v-on:click="toggleExpanded">-->
+                        <!--<a :href="WebSiteData.about_me[0].social[1].link" target="_blank"><i :class="WebSiteData.about_me[0].social[1].icon"></i>LinkedIn</a>-->
+                    <!--</li>-->
                 </ul>
             </div>
         </nav>

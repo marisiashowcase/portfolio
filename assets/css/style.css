@@ -1514,6 +1514,12 @@ h5.tittle {
 	text-align: center;
 }
 
+.isop-filter.modifywidth li {
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
 .isop-filter li a i, .isop-filter li router-link i {
 	margin-right: 8px;
 }

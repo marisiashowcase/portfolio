@@ -44,33 +44,33 @@
 
                 <!-- FORM -->
                 <form role="form" id="contact_form" class="contact-form" method="post" onSubmit="return false">
-                    <ul class="row">
+                    <ul class="row form_data">
                         <li class="col-sm-12">
                             <label>
-                                <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+
+                                <input type="text" class="form-control" v-model="formData.email_address"  placeholder="Email email_address">
+                                <input type="text" class="form-control" v-model="formData.email"  placeholder="Email email">
+
+
                             </label>
                         </li>
                         <li class="col-sm-12">
                             <label>
-                                <input type="text" class="form-control" name="company" id="company" placeholder="Subject">
+                                <input type="text" class="form-control" v-model="formData.first_name"  placeholder="Subject first_name">
+
+                                <input type="text" class="form-control" v-model="formData.name"  placeholder="Subject name">
                             </label>
                         </li>
                         <li class="col-sm-12">
                             <label>
-                                <textarea class="form-control" name="message" id="message" rows="5" placeholder="Message"></textarea>
+                                <textarea class="form-control" v-model="formData.write_message"  rows="5" placeholder="Message write_message"></textarea>
+
+                                <textarea class="form-control" v-model="formData.message"  rows="5" placeholder="Message message"></textarea>
                             </label>
                         </li>
 
-
-
-                            <li class="col-sm-12">
-
-                                <vue-recaptcha :sitekey="sitekey">
-                                    <button type="submit"  value="submit" id="btn_submit" onClick="proceed();">Send Message</button>
-
-                                </vue-recaptcha>
-
-
+                        <li class="col-sm-12">
+                            <button type="submit"  value="submit" id="btn_submit_1" v-on:click="sendMessage" >SEND</button>
                         </li>
                     </ul>
                 </form>
@@ -82,7 +82,7 @@
 
 <script>
 
-    import VueRecaptcha from 'vue-recaptcha';
+    import axios from 'axios';
 
     export default {
         name: "ProfessionalDetail",
@@ -91,7 +91,14 @@
             return {
                 hideProfessionalBtn: 0,
                 divProfessionalClass: ' professional-div-display ',
-                sitekey: '6LepIJMUAAAAAAjWbejekZ4RSRwg62MR0SzBPZg6'
+                formData: {
+                    email: '',
+                    email_address: '',
+                    first_name: '',
+                    name: '',
+                    write_message: '',
+                    message: ''
+                }
             }
         },
         mounted: function () {
@@ -100,33 +107,23 @@
         beforeDestroy: function () {
             window.removeEventListener('resize', this.handleResize)
         },
-        components: {
-            'vue-recaptcha': VueRecaptcha
-        },
+
         methods: {
             sendMessage: function(){
-                alert('hi there');
+
+                axios.post("https://portfolioweb.valet/app/index.php", {
+
+                    formData: this.formData
+                }).then((response) => {
+
+                }) ;
+
             },
             toggleProfessionalDiv: function(){
 
                 this.hideProfessionalBtn = this.hideProfessionalBtn?0:1;
 
                 this.divProfessionalClass = this.hideProfessionalBtn?' ':' professional-div-display d-none';
-            },
-            handleResize: function() {
-                this.hideProfessionalBtn = document.documentElement.clientHeight>990?0:1 ;
-            },
-            onSubmit: function () {
-                this.$refs.invisibleRecaptcha.execute()
-            },
-            onVerify: function (response) {
-                console.log('Verify: ' + response)
-            },
-            onExpired: function () {
-                console.log('Expired')
-            },
-            resetRecaptcha () {
-                this.$refs.recaptcha.reset() // Direct call reset method
             }
         }
 
@@ -135,6 +132,7 @@
 
 
 </script>
+
 
 <style scoped>
 

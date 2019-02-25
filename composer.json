@@ -1,5 +1,11 @@
 {
   "require": {
-    "google/recaptcha": "^1.2.1"
+    "illuminate/database": "^5.7",
+    "vlucas/phpdotenv": "^3.3",
+    "nesbot/carbon": "^1.36",
+    "phpmailer/phpmailer": "^6.0"
+  },
+  "autoload": {
+    "files": ["dist/app/DBConnection.php"]
   }
 }

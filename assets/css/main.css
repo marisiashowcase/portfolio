@@ -1839,3 +1839,15 @@ select.mobile-device{position:absolute!important;top:0;left:0;display:block!impo
 .exp-history-padding{
 	padding: 5px 30px;
 }
+
+.form_data .col-sm-12 input.form-control:nth-child(1){
+	display:none;
+}
+
+.form_data .col-sm-12:nth-child(2) input.form-control:nth-child(1){
+	display:none;
+}
+
+.form_data .col-sm-12:nth-child(3) textarea.form-control:nth-child(1){
+	display:none;
+}

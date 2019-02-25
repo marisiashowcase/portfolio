@@ -10,10 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.18.0",
     "get-style-property": "^0.1.1",
     "vue": "^2.6.7",
     "vue-hot-reload-api": "^2.3.2",
-    "vue-recaptcha": "^1.1.1",
     "vue-router": "^3.0.2"
   },
   "devDependencies": {
