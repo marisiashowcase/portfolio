@@ -10,144 +10,99 @@
             <!-- PORTFOLIO -->
             <section class="portfolio padding-top-50 padding-bottom-50">
                 <!-- Work Filter -->
-                <ul class="tabs portfolio-filter text-center margin-bottom-30">
-                    <li class="filter" data-filter="all">all</li>
-                    <li class="filter" data-filter=".brand">GitHub Access</li>
-                    <li class="filter" data-filter=".design">Front End</li>
-                    <li class="filter" data-filter=".photo">BackEnd</li>
-                </ul>
+                <!--<ul class="tabs portfolio-filter text-center margin-bottom-30">-->
+                    <!--<li class="filter" data-filter="all">all</li>-->
+                    <!--<li class="filter" data-filter=".brand">GitHub Access</li>-->
+                    <!--<li class="filter" data-filter=".design">Front End</li>-->
+                    <!--<li class="filter" data-filter=".photo">BackEnd</li>-->
+                <!--</ul>-->
 
                 <!-- PORTFOLIO ITEMS -->
                 <div id="Container" class="item-space row col-3">
 
-                    <!-- ITEM -->
-                    <article class="portfolio-item mix  design photo visual">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-1.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
                     <!-- ITEM -->
-                    <article class="portfolio-item mix brand  photo ">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-2.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
+                    <article class="portfolio-item mix  design photo visual" style="display: block; "
+                             v-on:mouseover="show = true" v-on:mouseleave="show = false">
+
+
+
+                        <div :class="className"   >
+                            <!--<a href="#.">-->
+                                <!--<img class="img-responsive" alt="Open Imagination" src="../../assets/images/moving_squad.png">-->
+                            <!--</a>-->
+                            <transition name="slide">
+                                <p  v-if="show"><i>Improved zip code form</i></p>
+                        </transition>
+
                         </div>
+
+
+                        <!--<transition name="slide">-->
+                            <!--<div style="width:216px; height: 149px; background-color: #f5f5f5;" v-if="showtest">-->
+                                <!--<p >Improved form</p>-->
+                            <!--</div>-->
+                        <!--</transition>-->
+
+                        <div style="background-color: #f5f5f5; padding:15px;text-align: center;">
+                            <div style="    text-transform: uppercase;
+                            color: #252525;
+                            font-weight: 600;
+                            font-size: 15px;
+                            margin-bottom: 3px;
+                            ">Moving</div>
+                            <div><i>movingsquad.com</i></div>
+                        </div>
+
                     </article>
 
-                    <!-- ITEM -->
-                    <article class="portfolio-item mix  photo visual">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-3.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
                     <!-- ITEM -->
-                    <article class="portfolio-item mix  design  visual ">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-4.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                    <!--<article class="portfolio-item mix  design photo visual" style="display: block;">-->
+                        <!--<div class="portfolio-image">-->
+                            <!--<a href="#.">-->
+                                <!--<img class="img-responsive" alt="Open Imagination" src="../../assets/images/moving_squad.png">-->
+                            <!--</a>-->
 
-                    <!-- ITEM -->
-                    <article class="portfolio-item mix brand  photo ">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-5.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
+                        <!--</div>-->
+                    <!--</article>-->
 
-                    <!-- ITEM -->
-                    <article class="portfolio-item mix brand ">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-9.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <!-- ITEM -->
-                    <article class="portfolio-item mix  photo visual">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-7.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
 
-                    <!-- ITEM -->
-                    <article class="portfolio-item mix brand design visual">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-8.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-
-                    <!-- ITEM -->
-                    <article class="portfolio-item mix brand design photo">
-                        <div class="portfolio-image"> <a href="#."> <img class="img-responsive" alt="Open Imagination" src="../../assets/images/portfolio/5/img-9.jpg"> </a>
-                            <div class="portfolio-overlay style-4">
-                                <div class="detail-info">
-                                    <div class="position-center-center">
-                                        <h3 class="no-margin">Assembly Branding</h3>
-                                        <span><a href="#.">Fashion / trending</a></span> <a href="#." class="go"><i class="fa fa-search"></i></a> <a href="#." class="go"><i class="fa fa-link"></i></a> </div>
-                                </div>
-                            </div>
-                        </div>
-                    </article>
                 </div>
             </section>
+
+
+
         </div>
+
+
     </div>
 </template>
 
 <script>
+
+
+
     export default {
-        name: "Portfolio"
+        name: "Portfolio",
+        data(){
+
+            return {
+                show: false,
+                className: 'portfolio-image background1'
+
+            }
+        },
+        watch:{
+            show: function () {
+                this.className = (this.show?' portfolio-image background2 ':' portfolio-image background1 ');
+            }
+        }
     }
 </script>
 
-<style scoped>
+<style >
+
 
 </style>

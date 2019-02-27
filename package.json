@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
+    "bootstrap-vue": "^2.0.0-rc.13",
     "get-style-property": "^0.1.1",
     "vue": "^2.6.7",
     "vue-hot-reload-api": "^2.3.2",

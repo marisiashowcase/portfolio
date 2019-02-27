@@ -8,10 +8,12 @@ import Blog from './components/_partials/Blog.vue';
 import ContactMe from './components/_partials/ContactMe.vue';
 import WebSiteData from './data';
 
+
 Vue.use(VueRouter);
 
+
 const routes = [
-    { path: '/', component: AboutMe, props: { WebSiteData } },
+    { path: '/', component: Portfolio, props: { WebSiteData } },
     { path: '/resume', component: Resume, props: { WebSiteData }  },
     { path: '/portfolio', component: Portfolio, props: { WebSiteData }  },
     { path: '/blog', component: Blog , props: { WebSiteData } },
