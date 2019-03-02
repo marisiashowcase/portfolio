@@ -13774,6 +13774,7 @@ var _default = {
     return {
       nabBarExpanded: 0,
       className: 'collapse navbar-collapse',
+      activeTab: 'about-me',
       pageStatus: {
         'about_me': 1,
         'resume': 0,
@@ -13791,18 +13792,21 @@ var _default = {
           this.pageStatus.about_me = 1;
           this.pageStatus.resume = 0;
           this.pageStatus.portfolio = 0;
+          this.activeTab = page;
           break;
 
         case 'resume':
           this.pageStatus.about_me = 0;
           this.pageStatus.resume = 1;
           this.pageStatus.portfolio = 0;
+          this.activeTab = page;
           break;
 
         case 'portfolio':
           this.pageStatus.about_me = 0;
           this.pageStatus.resume = 0;
           this.pageStatus.portfolio = 1;
+          this.activeTab = page;
           break;
 
         default:
@@ -13812,6 +13816,9 @@ var _default = {
       }
 
       _eventBus.EventBus.$emit('pageStatusCheck', this.pageStatus);
+    },
+    isActiveTab: function isActiveTab(tab) {
+      return tab == this.activeTab ? ' active ' : '';
     }
   }
 };
@@ -13854,7 +13861,7 @@ exports.default = _default;
           _c(
             "li",
             {
-              staticClass: " active",
+              class: _vm.isActiveTab("about-me"),
               attrs: { role: "presentation" },
               on: {
                 click: function($event) {
@@ -13874,6 +13881,7 @@ exports.default = _default;
           _c(
             "li",
             {
+              class: _vm.isActiveTab("resume"),
               attrs: { role: "presentation" },
               on: {
                 click: function($event) {
@@ -13893,6 +13901,7 @@ exports.default = _default;
           _c(
             "li",
             {
+              class: _vm.isActiveTab("portfolio"),
               attrs: { role: "presentation" },
               on: {
                 click: function($event) {

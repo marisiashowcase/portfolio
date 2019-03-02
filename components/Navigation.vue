@@ -8,13 +8,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div :class="className" id="nav-tabis">
                 <ul class="isop-filter nav nav-pills modifywidth">
-                    <li role="presentation" class=" active" v-on:click="toggleExpanded('about-me')">
+                    <li role="presentation" :class="isActiveTab('about-me')" v-on:click="toggleExpanded('about-me')">
                         <router-link to="/" ><i class="icon-user"></i> ABOUT ME</router-link>
                     </li>
-                    <li role="presentation" v-on:click="toggleExpanded('resume')">
+                    <li role="presentation" :class="isActiveTab('resume')" v-on:click="toggleExpanded('resume')">
                         <router-link to="/resume" ><i class="icon-book-open"></i>EXPERIENCE</router-link>
                     </li>
-                    <li role="presentation" v-on:click="toggleExpanded('portfolio')">
+                    <li role="presentation" :class="isActiveTab('portfolio')" v-on:click="toggleExpanded('portfolio')">
 
                         <router-link to="/portfolio" ><i class="fa fa-briefcase"></i>PORTFOLIO</router-link>
                     </li>
@@ -43,6 +43,7 @@
             return {
                 nabBarExpanded: 0,
                 className: 'collapse navbar-collapse',
+                activeTab: 'about-me',
                 pageStatus: {
                     'about_me': 1,
                     'resume': 0,
@@ -61,18 +62,21 @@
                         this.pageStatus.about_me = 1;
                         this.pageStatus.resume = 0;
                         this.pageStatus.portfolio = 0;
+                        this.activeTab = page;
                     break;
 
                     case 'resume':
                         this.pageStatus.about_me = 0;
                         this.pageStatus.resume = 1;
                         this.pageStatus.portfolio = 0;
+                        this.activeTab = page;
                     break;
 
                     case 'portfolio':
                         this.pageStatus.about_me = 0;
                         this.pageStatus.resume = 0;
                         this.pageStatus.portfolio = 1;
+                        this.activeTab = page;
                     break;
 
                     default:
@@ -83,9 +87,12 @@
                 }
 
                 EventBus.$emit('pageStatusCheck', this.pageStatus);
+            },
+            isActiveTab: function (tab) {
+
+                return tab == this.activeTab?' active ':'';
             }
         }
-
 
     }
 </script>
