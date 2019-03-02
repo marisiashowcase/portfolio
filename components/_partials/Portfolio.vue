@@ -9,67 +9,40 @@
 
             <!-- PORTFOLIO -->
             <section class="portfolio padding-top-50 padding-bottom-50">
-                <!-- Work Filter -->
-                <!--<ul class="tabs portfolio-filter text-center margin-bottom-30">-->
-                    <!--<li class="filter" data-filter="all">all</li>-->
-                    <!--<li class="filter" data-filter=".brand">GitHub Access</li>-->
-                    <!--<li class="filter" data-filter=".design">Front End</li>-->
-                    <!--<li class="filter" data-filter=".photo">BackEnd</li>-->
-                <!--</ul>-->
 
                 <!-- PORTFOLIO ITEMS -->
-                <div id="Container" class="item-space row col-3">
-
+                <div id="Container" class="item-space row col-3" >
 
                     <!-- ITEM -->
-                    <article class="portfolio-item mix  design photo visual" style="display: block; "
-                             v-on:mouseover="show = true" v-on:mouseleave="show = false">
+                    <article class="portfolio-item mix  design photo visual" style="display: block;" v-for="data in WebSiteData.portfolio[0]">
+                        <div class="portfolio-image">
+                            <div>
+                                <img  class="img-responsive" alt="Open Imagination" :src="imageUrl(data.logo)">
+                            </div>
 
 
-
-                        <div :class="className"   >
-                            <!--<a href="#.">-->
-                                <!--<img class="img-responsive" alt="Open Imagination" src="../../assets/images/moving_squad.png">-->
-                            <!--</a>-->
-                            <transition name="slide">
-                                <p  v-if="show"><i>Improved zip code form</i></p>
-                        </transition>
+                            <div class="company-info-div">
+                                <div class=" company-info-industry ">{{ data.industry}}</div>
+                                <a :href="sites_url(data.url)" target="_blank"><div><i>{{ data.url}}</i></div> </a>
+                            </div>
 
                         </div>
 
 
-                        <!--<transition name="slide">-->
-                            <!--<div style="width:216px; height: 149px; background-color: #f5f5f5;" v-if="showtest">-->
-                                <!--<p >Improved form</p>-->
+
+                        <!--<div class="popover fade top in" role="tooltip" id="pop625"-->
+                             <!--style="top: 10px; left: 0px; display: block;">-->
+                            <!--<div class="arrow" style="top: 100%;"></div>-->
+
+                            <!--<div class="popover-content">-->
+
+                                <!--<p>- Ultrices mi tempus imperdiet nulla malesuada pellentesq</p>-->
+                                <!--<p>- Ultrices mi tempus imperdiet nulla malesuada pellentesq</p>-->
                             <!--</div>-->
-                        <!--</transition>-->
-
-                        <div style="background-color: #f5f5f5; padding:15px;text-align: center;">
-                            <div style="    text-transform: uppercase;
-                            color: #252525;
-                            font-weight: 600;
-                            font-size: 15px;
-                            margin-bottom: 3px;
-                            ">Moving</div>
-                            <div><i>movingsquad.com</i></div>
-                        </div>
-
-                    </article>
-
-
-                    <!-- ITEM -->
-                    <!--<article class="portfolio-item mix  design photo visual" style="display: block;">-->
-                        <!--<div class="portfolio-image">-->
-                            <!--<a href="#.">-->
-                                <!--<img class="img-responsive" alt="Open Imagination" src="../../assets/images/moving_squad.png">-->
-                            <!--</a>-->
-
                         <!--</div>-->
-                    <!--</article>-->
-
-
-
+                    </article>
                 </div>
+
             </section>
 
 
@@ -82,21 +55,34 @@
 
 <script>
 
-
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
 
     export default {
         name: "Portfolio",
+        props: ['WebSiteData'],
         data(){
 
             return {
                 show: false,
                 className: 'portfolio-image background1'
-
             }
         },
         watch:{
             show: function () {
                 this.className = (this.show?' portfolio-image background2 ':' portfolio-image background1 ');
+            }
+        },
+        methods: {
+            imageUrl: function (image) {
+
+                return "/companies/"+ image;
+
+            },
+            sites_url: function (url) {
+
+                return "http://"+url;
             }
         }
     }

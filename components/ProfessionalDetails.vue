@@ -89,6 +89,7 @@
         props: ['WebSiteData'],
         data:function(){
             return {
+                site_url: this.WebSiteData.site_url,
                 hideProfessionalBtn: 0,
                 divProfessionalClass: ' professional-div-display ',
                 formData: {
@@ -111,7 +112,7 @@
         methods: {
             sendMessage: function(){
 
-                axios.post("https://portfolioweb.valet/app/index.php", {
+                axios.post(this.site_url+"app/index.php", {
 
                     formData: this.formData
                 }).then((response) => {

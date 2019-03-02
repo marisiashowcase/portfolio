@@ -1,5 +1,6 @@
 const website_data = {
 
+    'site_url': 'https://portfolioweb.valet/',
     'my_details' : [{
         'full_name': 'Marisia Coelho',
         'location': 'Pompano Beach, FL',
@@ -17,10 +18,10 @@ const website_data = {
         'services': [
             {'title': 'WEB DEVELOPMENT', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-whatsapp'},
             {'title': 'DATABASE MANAGEMENT', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-magic'},
-            {'title': 'SOFTWARE LIFECYCLE', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-smile-o'},
+            {'title': 'e-commerce', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-smile-o'},
             {'title': 'systems automation', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-diamond'},
             {'title': 'front end development', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-whatsapp'},
-            {'title': 'clean code', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-whatsapp'},
+            {'title': 'tdd', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-whatsapp'},
         ],
         'skills': [
             {'title': 'PHP'},
@@ -81,7 +82,30 @@ const website_data = {
             },
         ]
 
-    }]
+    }],
+    'portfolio': [
+        [
+            {'industry': 'Fundraiser', 'url':'givingspirit.com', 'logo': 'givingspirit.jpg'},
+            {'industry': 'Wholesale Supplier', 'url':'arnhub.com', 'logo': 'uncsdb.jpg'},
+            {'industry': 'Drug Discount Card', 'url':'prescriptionassistance.info', 'logo': 'prescriptionassistance.jpg'},
+            {'industry': 'Drug Discount Card', 'url':'watertreehealthcard.com', 'logo': 'watertreehealth.jpg'},
+            {'industry': 'Drug Discount Card', 'url':'pharmaquotes.com', 'logo': 'pharmaquotes.jpg'},
+
+            {'industry': 'Party Events', 'url':'partyforus.com', 'logo': 'party-for-us.jpg'},
+            {'industry': 'Car Wash', 'url':'rccontherise.com', 'logo': 'royal-care-care.jpg'},
+            {'industry': 'Supplement', 'url':'hotrawks.com', 'logo': 'hot-rawks.jpg'},
+            {'industry': 'Insurance', 'url':'welcomefunds.com', 'logo': 'welcomefunds.jpg'},
+            {'industry': 'Medical Cost', 'url':'favmedsusa.com', 'logo': 'fav-meds.jpg'},
+            {'industry': 'Travel & Tours', 'url':'alaskashoreexcursions.com', 'logo': 'alaska-shoreexcursions.jpg'},
+            {'industry': 'Health Care', 'url':'scanabilities.com', 'logo': 'scanabilities.jpg'},
+
+            {'industry': 'Relocation Services', 'url':'movingsquad.com', 'logo': 'moving_squad.jpg'},
+            {'industry': 'Relocation Services', 'url':'movingcost.com', 'logo': 'movingcost.jpg'},
+            {'industry': 'Relocation Services', 'url':'allstatevanlinesrelo.com', 'logo': 'allstaterelocation.png'},
+
+
+        ],
+    ]
 };
 
 

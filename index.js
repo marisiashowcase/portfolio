@@ -13,7 +13,7 @@ Vue.use(VueRouter);
 
 
 const routes = [
-    { path: '/', component: Portfolio, props: { WebSiteData } },
+    { path: '/', component: AboutMe, props: { WebSiteData } },
     { path: '/resume', component: Resume, props: { WebSiteData }  },
     { path: '/portfolio', component: Portfolio, props: { WebSiteData }  },
     { path: '/blog', component: Blog , props: { WebSiteData } },
