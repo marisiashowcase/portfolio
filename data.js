@@ -16,12 +16,12 @@ const website_data = {
         'main_paragraph': 'Self-motivated web developer passionate in creating user-friendly experiences utilizing a mix of both frontend and backend technologies. Through my eagerness to learn and share what I learn, I have been able to successfully deploy several projects from ideas to fully functional platforms. ',
 
         'services': [
-            {'title': 'WEB DEVELOPMENT', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-whatsapp'},
-            {'title': 'DATABASE MANAGEMENT', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-magic'},
-            {'title': 'e-commerce', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-smile-o'},
-            {'title': 'systems automation', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-diamond'},
-            {'title': 'front end development', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-whatsapp'},
-            {'title': 'tdd', 'description': 'We have created the new macbook psd version with scalable vector shapes.', 'icon':'fa fa-whatsapp'},
+            {'title': 'WEB DEVELOPMENT', 'description': 'Created dynamic, high-speed, responsive websites. Well versed with technologies like Vue.js & jQuery', 'icon':'fa fa-globe'},
+            {'title': 'DATABASE MANAGEMENT', 'description': 'Proficient with DB management with efficiently organizing, recording and implementing data sets.', 'icon':'fa fa-database'},
+            {'title': 'e-commerce', 'description': 'Ecommerce solution provider. Professional designer, developer & integrator of ecommerce functionalities. ', 'icon':'fa fa-shopping-cart'},
+            {'title': 'systems automation', 'description': 'Substantial knowledge over the system automation process. Planned, developed and executed several projects. ', 'icon':'fa fa-cogs'},
+            {'title': 'front end development', 'description': 'Specialized in creating clean, compact & compliant front ends. Successfully prototyped myriad of websites.', 'icon':'fa fa-html5'},
+            {'title': 'tdd', 'description': 'Skilled at developing scalable and stable applications with test-driven development approach to provide the best user experience.', 'icon':'fa fa-check-circle'},
         ],
         'skills': [
             {'title': 'PHP'},
