@@ -21,7 +21,7 @@ const website_data = {
             {'title': 'e-commerce', 'description': 'Ecommerce solution provider. Professional designer, developer & integrator of ecommerce functionalities. ', 'icon':'fa fa-shopping-cart'},
             {'title': 'systems automation', 'description': 'Substantial knowledge over the system automation process. Planned, developed and executed several projects. ', 'icon':'fa fa-cogs'},
             {'title': 'front end development', 'description': 'Specialized in creating clean, compact & compliant front ends. Successfully prototyped myriad of websites.', 'icon':'fa fa-html5'},
-            {'title': 'tdd', 'description': 'Skilled at developing scalable and stable applications with test-driven development approach to provide the best user experience.', 'icon':'fa fa-check-circle'},
+            {'title': 'tdd', 'description': 'Skilled at implementing test-driven development to provide quality, maintainable and easily extensible application.', 'icon':'fa fa-check-circle'},
         ],
         'skills': [
             {'title': 'PHP'},

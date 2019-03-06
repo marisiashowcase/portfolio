@@ -11106,7 +11106,7 @@ var website_data = {
       'icon': 'fa fa-html5'
     }, {
       'title': 'tdd',
-      'description': 'Skilled at developing scalable and stable applications with test-driven development approach to provide the best user experience.',
+      'description': 'Skilled at implementing test-driven development to provide quality, maintainable and easily extensible application.',
       'icon': 'fa fa-check-circle'
     }],
     'skills': [{
@@ -15660,7 +15660,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56220" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49623" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
