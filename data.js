@@ -44,8 +44,7 @@ const website_data = {
         'social': [
             { 'link': 'https://github.com/marisiashowcase/', 'icon': 'fa fa-github'},
             { 'link': 'https://www.linkedin.com/in/marisia-coelho-028633106/', 'icon': 'fa fa-linkedin'},
-            { 'link': 'https://github.com/marisiashowcase/', 'icon': 'fa fa-skype'},
-            { 'link': 'https://github.com/marisiashowcase/', 'icon': 'fa fa-facebook'}
+            { 'link': 'https://opensourcedivateam.slack.com', 'icon': 'fa fa-slack'}
             ]
 
     }],
@@ -53,6 +52,13 @@ const website_data = {
     'resume' : [{
         'jobs': [
 
+            {'date': '2019 - Present', 'company': 'SCI Direct', 'location':'Plantation, FL', 'my_title': 'PHP Developer',
+                'bullets' :[
+                    {'li': 'Assist with module development within the current design of the application.'},
+                    {'li': 'Responsible for integration of applications to the current platform.'},
+
+                ]
+            },
             {'date': '2017 - 2019', 'company': 'Agile Element', 'location':'Fort Lauderdale, FL', 'my_title': 'Full Stack PHP Developer',
                 'bullets' :[
                     {'li': 'Responsible for improving performance on our existing API\'s used by multiple web applications by integrating a caching solution, improving error handling along with new business requirements and validations.'},
@@ -85,8 +91,8 @@ const website_data = {
     }],
     'portfolio': [
         [
-            {'industry': 'Fundraiser', 'url':'givingspirit.com', 'logo': 'givingspirit.jpg'},
-            {'industry': 'Wholesale Supplier', 'url':'arnhub.com', 'logo': 'uncsdb.jpg'},
+            {'industry': 'Fundraiser', 'url':'givingspirit.com', 'logo': 'givingspirit.jpg', 'github': 'https://github.com/marisiashowcase/donation_system'},
+            {'industry': 'Wholesale Supplier', 'url':'arnhub.com', 'logo': 'uncsdb.jpg', 'github': 'https://github.com/marisiashowcase/uncs_crm'},
             {'industry': 'Drug Discount Card', 'url':'prescriptionassistance.info', 'logo': 'prescriptionassistance.jpg'},
             {'industry': 'Drug Discount Card', 'url':'watertreehealthcard.com', 'logo': 'watertreehealth.jpg'},
             {'industry': 'Drug Discount Card', 'url':'pharmaquotes.com', 'logo': 'pharmaquotes.jpg'},
@@ -94,6 +100,7 @@ const website_data = {
             {'industry': 'Party Events', 'url':'partyforus.com', 'logo': 'party-for-us.jpg'},
             {'industry': 'Car Wash', 'url':'rccontherise.com', 'logo': 'royal-care-care.jpg'},
             {'industry': 'Supplement', 'url':'hotrawks.com', 'logo': 'hot-rawks.jpg'},
+            {'industry': 'Transportation', 'url':'paris-shuttle.com', 'logo': 'parisshuttle.png', 'github': 'https://github.com/marisiashowcase/paris_shuttle'},
             {'industry': 'Insurance', 'url':'welcomefunds.com', 'logo': 'welcomefunds.jpg'},
             {'industry': 'Medical Cost', 'url':'favmedsusa.com', 'logo': 'fav-meds.jpg'},
             {'industry': 'Travel & Tours', 'url':'alaskashoreexcursions.com', 'logo': 'alaska-shoreexcursions.jpg'},

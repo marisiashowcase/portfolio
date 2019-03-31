@@ -1,5 +1,5 @@
 <template>
-    <div id="professional-div">
+    <div id="professional-div" >
 
             <!-- Professional Details -->
             <h5 class="tittle">Professional Details  <i class="fa fa-plus  hide-show-btn" aria-hidden="true" v-if="!hideProfessionalBtn" v-on:click="toggleProfessionalDiv"></i>
@@ -7,7 +7,7 @@
 
         <div :class="divProfessionalClass">
 
-            <img src="../assets/images/avatar-4.jpg" class="img-responsive" alt="">
+            <img src="../assets/images/avatar-5.jpg" class="img-responsive" alt="">
             <ul class="personal-info">
                 <li>
                     <p> <span> Name</span> {{ WebSiteData.my_details[0].full_name }} </p>
@@ -35,6 +35,19 @@
                     <li v-for="value in WebSiteData.about_me[0].social" > <a :href="value.link" target="_blank"> <i :class="value.icon"></i></a> </li>
                 </ul>
             </div>
+
+            <!-- Social Profiles -->
+            <h5 class="tittle">Languages</h5>
+
+            <ul class="personal-info" style=" font-size: 12px; ">
+                <li>
+                    <p> <span> Portuguese</span> Fluent </p>
+                </li>
+                <li>
+                    <p> <span> Spanish</span> Intermediate </p>
+                </li>
+            </ul>
+
 
             <!-- Contact Me -->
             <h5 class="tittle">Contact Me</h5>

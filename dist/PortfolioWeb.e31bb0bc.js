@@ -11147,15 +11147,22 @@ var website_data = {
       'link': 'https://www.linkedin.com/in/marisia-coelho-028633106/',
       'icon': 'fa fa-linkedin'
     }, {
-      'link': 'https://github.com/marisiashowcase/',
-      'icon': 'fa fa-skype'
-    }, {
-      'link': 'https://github.com/marisiashowcase/',
-      'icon': 'fa fa-facebook'
+      'link': 'https://opensourcedivateam.slack.com',
+      'icon': 'fa fa-slack'
     }]
   }],
   'resume': [{
     'jobs': [{
+      'date': '2019 - Present',
+      'company': 'SCI Direct',
+      'location': 'Plantation, FL',
+      'my_title': 'PHP Developer',
+      'bullets': [{
+        'li': 'Assist with module development within the current design of the application.'
+      }, {
+        'li': 'Responsible for integration of applications to the current platform.'
+      }]
+    }, {
       'date': '2017 - 2019',
       'company': 'Agile Element',
       'location': 'Fort Lauderdale, FL',
@@ -11204,11 +11211,13 @@ var website_data = {
   'portfolio': [[{
     'industry': 'Fundraiser',
     'url': 'givingspirit.com',
-    'logo': 'givingspirit.jpg'
+    'logo': 'givingspirit.jpg',
+    'github': 'https://github.com/marisiashowcase/donation_system'
   }, {
     'industry': 'Wholesale Supplier',
     'url': 'arnhub.com',
-    'logo': 'uncsdb.jpg'
+    'logo': 'uncsdb.jpg',
+    'github': 'https://github.com/marisiashowcase/uncs_crm'
   }, {
     'industry': 'Drug Discount Card',
     'url': 'prescriptionassistance.info',
@@ -11233,6 +11242,11 @@ var website_data = {
     'industry': 'Supplement',
     'url': 'hotrawks.com',
     'logo': 'hot-rawks.jpg'
+  }, {
+    'industry': 'Transportation',
+    'url': 'paris-shuttle.com',
+    'logo': 'parisshuttle.png',
+    'github': 'https://github.com/marisiashowcase/paris_shuttle'
   }, {
     'industry': 'Insurance',
     'url': 'welcomefunds.com',
@@ -13337,6 +13351,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 var _default = {
   name: "ProfessionalDetail",
   props: ['WebSiteData'],
@@ -13409,7 +13436,7 @@ exports.default = _default;
     _c("div", { class: _vm.divProfessionalClass }, [
       _c("img", {
         staticClass: "img-responsive",
-        attrs: { src: "/avatar-4.1783627b.jpg", alt: "" }
+        attrs: { src: "/avatar-5.52987c0c.jpg", alt: "" }
       }),
       _vm._v(" "),
       _c("ul", { staticClass: "personal-info" }, [
@@ -13467,10 +13494,14 @@ exports.default = _default;
         )
       ]),
       _vm._v(" "),
+      _c("h5", { staticClass: "tittle" }, [_vm._v("Languages")]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
       _c("h5", { staticClass: "tittle" }, [_vm._v("Contact Me")]),
       _vm._v(" "),
       _c("div", { staticClass: "contact padding-25" }, [
-        _vm._m(0),
+        _vm._m(1),
         _vm._v(" "),
         _c(
           "form",
@@ -13668,6 +13699,24 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c(
+      "ul",
+      { staticClass: "personal-info", staticStyle: { "font-size": "12px" } },
+      [
+        _c("li", [
+          _c("p", [_c("span", [_vm._v(" Portuguese")]), _vm._v(" Fluent ")])
+        ]),
+        _vm._v(" "),
+        _c("li", [
+          _c("p", [_c("span", [_vm._v(" Spanish")]), _vm._v(" Intermediate ")])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
       "div",
       { staticClass: "success-msg", attrs: { id: "contact_message" } },
       [
@@ -13709,7 +13758,7 @@ render._withStripped = true
       
       }
     })();
-},{"axios":"node_modules/axios/index.js","./../assets/images/avatar-4.jpg":[["avatar-4.1783627b.jpg","assets/images/avatar-4.jpg"],"assets/images/avatar-4.jpg"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"assets/js/event-bus.js":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","./../assets/images/avatar-5.jpg":[["avatar-5.52987c0c.jpg","assets/images/avatar-5.jpg"],"assets/images/avatar-5.jpg"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"assets/js/event-bus.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -14545,6 +14594,9 @@ var _eventBus = require("../../assets/js/event-bus.js");
 //
 //
 //
+//
+//
+//
 var _default = {
   props: ['WebSiteData'],
   name: "Resume",
@@ -14575,53 +14627,57 @@ exports.default = _default;
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "col-md-8" }, [
-    _c(
-      "div",
-      { staticClass: "inside-sec " },
-      [
-        _c("h5", { staticClass: "tittle" }, [
-          _vm._v("Professional Experience")
-        ]),
-        _vm._v(" "),
+    _c("div", { staticClass: "inside-sec " }, [
+      _c("h5", { staticClass: "tittle" }, [_vm._v("Professional Experience")]),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: " margin-top-25" },
         _vm._l(_vm.WebSiteData.resume[0].jobs, function(value) {
-          return _c("div", { staticClass: "exp-history-padding exp-history" }, [
-            _c("div", { staticClass: "exp" }, [
-              _c("div", { staticClass: "media-left" }, [
-                _c("span", { staticClass: "sun" }, [_vm._v(_vm._s(value.date))])
-              ]),
-              _vm._v(" "),
-              _c(
-                "div",
-                { staticClass: "media-body" },
-                [
-                  _c("h6", [_vm._v(_vm._s(value.my_title))]),
-                  _vm._v(" "),
-                  _c("p", { staticStyle: { "font-size": "16px" } }, [
-                    _vm._v(_vm._s(value.company))
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [_vm._v(_vm._s(value.location))]),
-                  _vm._v(" "),
-                  _vm._l(value.bullets, function(job) {
-                    return _c("div", [
-                      _c("p", { staticClass: "margin-top-10" }, [
-                        _vm._v(
-                          "\n                            • " +
-                            _vm._s(job.li) +
-                            "\n                        "
-                        )
+          return _c(
+            "div",
+            { staticClass: "exp-history-padding exp-history " },
+            [
+              _c("div", { staticClass: "exp " }, [
+                _c("div", { staticClass: "media-left" }, [
+                  _c("span", { staticClass: "sun" }, [
+                    _vm._v(_vm._s(value.date))
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "media-body" },
+                  [
+                    _c("h6", [_vm._v(_vm._s(value.my_title))]),
+                    _vm._v(" "),
+                    _c("p", { staticStyle: { "font-size": "16px" } }, [
+                      _vm._v(_vm._s(value.company))
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v(_vm._s(value.location))]),
+                    _vm._v(" "),
+                    _vm._l(value.bullets, function(job) {
+                      return _c("div", [
+                        _c("p", { staticClass: "margin-top-10" }, [
+                          _vm._v(
+                            "\n                                • " +
+                              _vm._s(job.li) +
+                              "\n                            "
+                          )
+                        ])
                       ])
-                    ])
-                  })
-                ],
-                2
-              )
-            ])
-          ])
-        })
-      ],
-      2
-    ),
+                    })
+                  ],
+                  2
+                )
+              ])
+            ]
+          )
+        }),
+        0
+      )
+    ]),
     _vm._v(" "),
     _vm._m(0)
   ])
@@ -14760,6 +14816,10 @@ exports.default = void 0;
 //
 //
 //
+//
+//
+//
+//
 $(function () {
   $('[data-toggle="popover"]').popover();
 });
@@ -14842,8 +14902,23 @@ exports.default = _default;
                             target: "_blank"
                           }
                         },
-                        [_c("div", [_c("i", [_vm._v(_vm._s(data.url))])])]
-                      )
+                        [_c("span", [_c("i", [_vm._v(_vm._s(data.url))])])]
+                      ),
+                      _vm._v(" "),
+                      data.github
+                        ? _c("span", [
+                            _c(
+                              "a",
+                              {
+                                attrs: {
+                                  href: _vm.sites_url(data.github),
+                                  target: "_blank"
+                                }
+                              },
+                              [_c("i", { staticClass: "fa fa-github" })]
+                            )
+                          ])
+                        : _vm._e()
                     ])
                   ])
                 ]
@@ -15660,7 +15735,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49623" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60204" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

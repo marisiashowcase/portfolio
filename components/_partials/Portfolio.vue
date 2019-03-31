@@ -23,7 +23,11 @@
 
                             <div class="company-info-div">
                                 <div class=" company-info-industry ">{{ data.industry}}</div>
-                                <a :href="sites_url(data.url)" target="_blank"><div><i>{{ data.url}}</i></div> </a>
+                                <a :href="sites_url(data.url)" target="_blank"><span><i>{{ data.url}}</i></span> </a>
+                                <span v-if="data.github">
+                                    <a  :href="sites_url(data.github)" target="_blank"><i  class="fa fa-github"></i> </a>
+                                </span>
+
                             </div>
 
                         </div>

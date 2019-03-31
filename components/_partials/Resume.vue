@@ -5,27 +5,30 @@
         <div class="inside-sec ">
             <!-- Professional Experience -->
             <h5 class="tittle">Professional Experience</h5>
-            <div class="exp-history-padding exp-history" v-for="value in WebSiteData.resume[0].jobs" >
+            <div class=" margin-top-25">
+                <div class="exp-history-padding exp-history " v-for="value in WebSiteData.resume[0].jobs" >
 
-                <!-- Wordpress Developer -->
-                <div class="exp">
-                    <div class="media-left"> <span class="sun">{{ value.date}}</span> </div>
-                    <div class="media-body">
+                    <div class="exp ">
+                        <div class="media-left"> <span class="sun">{{ value.date}}</span> </div>
+                        <div class="media-body">
 
-                        <h6>{{ value.my_title}}</h6>
-                        <p style="font-size: 16px;">{{ value.company}}</p>
-                        <p>{{ value.location}}</p>
+                            <h6>{{ value.my_title}}</h6>
+                            <p style="font-size: 16px;">{{ value.company}}</p>
+                            <p>{{ value.location}}</p>
 
-                        <div v-for="job in value.bullets">
-                            <p class="margin-top-10">
-                                • {{ job.li}}
-                            </p>
+                            <div v-for="job in value.bullets">
+                                <p class="margin-top-10">
+                                    • {{ job.li}}
+                                </p>
+                            </div>
+
                         </div>
-
                     </div>
-                </div>
 
+                </div>
             </div>
+
+
         </div>
 
         <!-- Academic Background -->
