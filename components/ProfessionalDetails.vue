@@ -87,6 +87,11 @@
                         </li>
                     </ul>
                 </form>
+
+                <div class="alert alert-success" role="alert" v-if="showemailalert">
+                    Email was sent successfully!
+                </div>
+
             </div>
 
         </div>
@@ -105,6 +110,7 @@
                 site_url: this.WebSiteData.site_url,
                 hideProfessionalBtn: 0,
                 divProfessionalClass: ' professional-div-display ',
+                showemailalert: 0,
                 formData: {
                     email: '',
                     email_address: '',
@@ -125,12 +131,19 @@
         methods: {
             sendMessage: function(){
 
+                let vm = this;
+
+                vm.showemailalert = 1;
                 axios.post(this.site_url+"app/index.php", {
 
                     formData: this.formData
                 }).then((response) => {
 
                 }) ;
+
+                setTimeout(function(){
+                    vm.showemailalert = 0;
+                }, 3000);
 
             },
             toggleProfessionalDiv: function(){
