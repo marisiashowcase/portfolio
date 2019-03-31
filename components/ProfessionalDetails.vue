@@ -21,9 +21,6 @@
                 <li>
                     <p> <span> Degree</span> {{ WebSiteData.my_details[0].degree }} </p>
                 </li>
-                <li>
-                    <p> <span> Career Level</span> {{ WebSiteData.my_details[0].career_level }} </p>
-                </li>
 
             </ul>
 
@@ -41,10 +38,13 @@
 
             <ul class="personal-info" style=" font-size: 12px; ">
                 <li>
+                    <p> <span> English</span> Fluent </p>
+                </li>
+                <li>
                     <p> <span> Portuguese</span> Fluent </p>
                 </li>
                 <li>
-                    <p> <span> Spanish</span> Intermediate </p>
+                    <p> <span> Spanish</span> Basic </p>
                 </li>
             </ul>
 

@@ -13479,15 +13479,6 @@ exports.default = _default;
             _c("span", [_vm._v(" Degree")]),
             _vm._v(" " + _vm._s(_vm.WebSiteData.my_details[0].degree) + " ")
           ])
-        ]),
-        _vm._v(" "),
-        _c("li", [
-          _c("p", [
-            _c("span", [_vm._v(" Career Level")]),
-            _vm._v(
-              " " + _vm._s(_vm.WebSiteData.my_details[0].career_level) + " "
-            )
-          ])
         ])
       ]),
       _vm._v(" "),
@@ -13728,11 +13719,15 @@ var staticRenderFns = [
       { staticClass: "personal-info", staticStyle: { "font-size": "12px" } },
       [
         _c("li", [
+          _c("p", [_c("span", [_vm._v(" English")]), _vm._v(" Fluent ")])
+        ]),
+        _vm._v(" "),
+        _c("li", [
           _c("p", [_c("span", [_vm._v(" Portuguese")]), _vm._v(" Fluent ")])
         ]),
         _vm._v(" "),
         _c("li", [
-          _c("p", [_c("span", [_vm._v(" Spanish")]), _vm._v(" Intermediate ")])
+          _c("p", [_c("span", [_vm._v(" Spanish")]), _vm._v(" Basic ")])
         ])
       ]
     )
@@ -14842,9 +14837,6 @@ exports.default = void 0;
 //
 //
 //
-//
-//
-//
 $(function () {
   $('[data-toggle="popover"]').popover();
 });
@@ -14928,22 +14920,7 @@ exports.default = _default;
                           }
                         },
                         [_c("span", [_c("i", [_vm._v(_vm._s(data.url))])])]
-                      ),
-                      _vm._v(" "),
-                      data.github
-                        ? _c("span", [
-                            _c(
-                              "a",
-                              {
-                                attrs: {
-                                  href: _vm.sites_url(data.github),
-                                  target: "_blank"
-                                }
-                              },
-                              [_c("i", { staticClass: "fa fa-github" })]
-                            )
-                          ])
-                        : _vm._e()
+                      )
                     ])
                   ])
                 ]
