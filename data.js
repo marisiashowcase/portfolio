@@ -1,6 +1,6 @@
 const website_data = {
 
-    'site_url': 'https://portfolioweb.valet/',
+    'site_url': 'http://themcdeveloper.com/',
     'my_details' : [{
         'full_name': 'Marisia Coelho',
         'location': 'Pompano Beach, FL',
