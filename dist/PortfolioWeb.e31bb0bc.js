@@ -11072,7 +11072,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var website_data = {
-  'site_url': 'http://themcdeveloper.com/',
+  'site_url': 'https://portfolioweb.valet/',
   'my_details': [{
     'full_name': 'Marisia Coelho',
     'location': 'Pompano Beach, FL',
@@ -13364,6 +13364,11 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
 var _default = {
   name: "ProfessionalDetail",
   props: ['WebSiteData'],
@@ -13372,6 +13377,7 @@ var _default = {
       site_url: this.WebSiteData.site_url,
       hideProfessionalBtn: 0,
       divProfessionalClass: ' professional-div-display ',
+      showemailalert: 0,
       formData: {
         email: '',
         email_address: '',
@@ -13390,9 +13396,16 @@ var _default = {
   },
   methods: {
     sendMessage: function sendMessage() {
+      var vm = this;
+      vm.showemailalert = 1;
+
       _axios.default.post(this.site_url + "app/index.php", {
         formData: this.formData
       }).then(function (response) {});
+
+      setTimeout(function () {
+        vm.showemailalert = 0;
+      }, 3000);
     },
     toggleProfessionalDiv: function toggleProfessionalDiv() {
       this.hideProfessionalBtn = this.hideProfessionalBtn ? 0 : 1;
@@ -13688,7 +13701,19 @@ exports.default = _default;
               ])
             ])
           ]
-        )
+        ),
+        _vm._v(" "),
+        _vm.showemailalert
+          ? _c(
+              "div",
+              { staticClass: "alert alert-success", attrs: { role: "alert" } },
+              [
+                _vm._v(
+                  "\n                Email was sent successfully!\n            "
+                )
+              ]
+            )
+          : _vm._e()
       ])
     ])
   ])
