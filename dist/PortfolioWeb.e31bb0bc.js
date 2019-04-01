@@ -11072,7 +11072,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var website_data = {
-  'site_url': 'https://portfolioweb.valet/',
+  'site_url': 'http://themcdeveloper.com/',
   'my_details': [{
     'full_name': 'Marisia Coelho',
     'location': 'Pompano Beach, FL',
@@ -15737,7 +15737,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54116" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51026" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
