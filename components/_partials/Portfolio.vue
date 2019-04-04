@@ -60,6 +60,10 @@
         $('[data-toggle="popover"]').popover()
     })
 
+    gtag('config', 'GA_MEASUREMENT_ID_3', {
+        'page_path': '/portfolio'
+    });
+
     export default {
         name: "Portfolio",
         props: ['WebSiteData'],

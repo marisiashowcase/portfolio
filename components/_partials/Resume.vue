@@ -67,9 +67,14 @@
 
     import { EventBus } from '../../assets/js/event-bus.js';
 
+    gtag('config', 'GA_MEASUREMENT_ID_2', {
+        'page_path': '/resume'
+    });
+
     export default {
         props: ['WebSiteData'],
         name: "Resume",
+
         data: function () {
 
             return {

@@ -115,9 +115,20 @@
 
     import { EventBus } from '../../assets/js/event-bus.js';
 
+    gtag('config', 'GA_MEASUREMENT_ID_1', {
+        'page_path': '/'
+    });
+
     export default {
         name: "AboutMe",
         props: ['WebSiteData'],
+        metaInfo: {
+            title: 'Full stack developer PHP in South Florida', // set a title
+            htmlAttrs: {
+                lang: 'en',
+                amp: undefined // "amp" has no value
+            }
+        },
         data: function () {
 
             return {
