@@ -115,10 +115,6 @@
 
     import { EventBus } from '../../assets/js/event-bus.js';
 
-    gtag('config', 'GA_MEASUREMENT_ID_1', {
-        'page_path': '/'
-    });
-
     export default {
         name: "AboutMe",
         props: ['WebSiteData'],
@@ -140,6 +136,10 @@
             EventBus.$on('pageStatusCheck', (data) => {
 
                 this.showPage = data.about_me? 'tab-pane fade in active':'tab-pane fade in '
+            });
+
+            gtag('config', 'GA_MEASUREMENT_ID_1', {
+                'page_path': '/'
             });
         }
     }

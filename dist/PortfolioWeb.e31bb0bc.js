@@ -14324,9 +14324,6 @@ var _eventBus = require("../../assets/js/event-bus.js");
 //
 //
 //
-gtag('config', 'GA_MEASUREMENT_ID_1', {
-  'page_path': '/'
-});
 var _default = {
   name: "AboutMe",
   props: ['WebSiteData'],
@@ -14349,6 +14346,10 @@ var _default = {
 
     _eventBus.EventBus.$on('pageStatusCheck', function (data) {
       _this.showPage = data.about_me ? 'tab-pane fade in active' : 'tab-pane fade in ';
+    });
+
+    gtag('config', 'GA_MEASUREMENT_ID_1', {
+      'page_path': '/'
     });
   }
 };
@@ -14629,9 +14630,6 @@ var _eventBus = require("../../assets/js/event-bus.js");
 //
 //
 //
-gtag('config', 'GA_MEASUREMENT_ID_2', {
-  'page_path': '/resume'
-});
 var _default = {
   props: ['WebSiteData'],
   name: "Resume",
@@ -14645,6 +14643,10 @@ var _default = {
 
     _eventBus.EventBus.$on('pageStatusCheck', function (data) {
       _this.showPage = data.resume ? 1 : 0;
+    });
+
+    gtag('config', 'GA_MEASUREMENT_ID_2', {
+      'page_path': '/resume'
     });
   }
 };
@@ -17114,7 +17116,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61417" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54139" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
