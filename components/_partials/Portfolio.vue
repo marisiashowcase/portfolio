@@ -71,7 +71,9 @@
 
             return {
                 show: false,
-                className: 'portfolio-image background1'
+                className: 'portfolio-image background1',
+                metaTitle: this.WebSiteData.portfolio[0].meta_title,
+                metaDescription: this.WebSiteData.portfolio[0].meta_description,
             }
         },
         watch:{
@@ -89,6 +91,15 @@
 
                 return "http://"+url;
             }
+        },
+        metaInfo() {
+            return {
+                title: this.metaTitle,
+                meta: [
+                    { vmid: 'description', name: 'description', content: this.metaDescription }
+                ]
+            }
+
         }
     }
 </script>

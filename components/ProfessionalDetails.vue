@@ -67,13 +67,7 @@
 
                             </label>
                         </li>
-                        <li class="col-sm-12">
-                            <label>
-                                <input type="text" class="form-control" v-model="formData.first_name"  placeholder="Subject first_name">
 
-                                <input type="text" class="form-control" v-model="formData.name"  placeholder="Subject name">
-                            </label>
-                        </li>
                         <li class="col-sm-12">
                             <label>
                                 <textarea class="form-control" v-model="formData.write_message"  rows="5" placeholder="Message write_message"></textarea>
@@ -114,8 +108,7 @@
                 formData: {
                     email: '',
                     email_address: '',
-                    first_name: '',
-                    name: '',
+
                     write_message: '',
                     message: ''
                 }
@@ -134,7 +127,7 @@
                 let vm = this;
 
                 vm.showemailalert = 1;
-                axios.post(this.site_url+"app/index.php", {
+                axios.post("/email.php", {
 
                     formData: this.formData
                 }).then((response) => {

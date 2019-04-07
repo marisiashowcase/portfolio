@@ -11071,6 +11071,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
+var about_me_description = 'Web developer with PHP, MySql, Javascript, Vue.js, API, MVS, Ajax, JSON, XML experience in South Florida, Broward county.';
+var experience_description = 'PHP Web developer with custom programming experience in a variety of industries in South Florida.';
+var portfolio_description = 'Motivated Web Developer with proven experience building web applications in South Florida.';
 var website_data = {
   'site_url': 'http://themcdeveloper.com/',
   'my_details': [{
@@ -11083,6 +11086,8 @@ var website_data = {
     'website': 'themcdeveloper.com'
   }],
   'about_me': [{
+    'meta_title': 'Full Stack PHP Developer - About Me',
+    'meta_description': about_me_description,
     'main_paragraph': 'Self-motivated web developer passionate in creating user-friendly experiences utilizing a mix of both frontend and backend technologies. Through my eagerness to learn and share what I learn, I have been able to successfully deploy several projects from ideas to fully functional platforms. ',
     'services': [{
       'title': 'WEB DEVELOPMENT',
@@ -11152,6 +11157,8 @@ var website_data = {
     }]
   }],
   'resume': [{
+    'meta_title': 'Full Stack PHP Developer - Experience',
+    'meta_description': experience_description,
     'jobs': [{
       'date': '2019 - Present',
       'company': 'SCI Direct',
@@ -11275,7 +11282,10 @@ var website_data = {
     'industry': 'Relocation Services',
     'url': 'allstatevanlinesrelo.com',
     'logo': 'allstaterelocation.png'
-  }]]
+  }], {
+    'meta_title': 'Full Stack PHP Developer - Portfolio',
+    'meta_description': portfolio_description
+  }]
 };
 var _default = website_data;
 exports.default = _default;
@@ -13363,12 +13373,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
 var _default = {
   name: "ProfessionalDetail",
   props: ['WebSiteData'],
@@ -13381,8 +13385,6 @@ var _default = {
       formData: {
         email: '',
         email_address: '',
-        first_name: '',
-        name: '',
         write_message: '',
         message: ''
       }
@@ -13399,7 +13401,7 @@ var _default = {
       var vm = this;
       vm.showemailalert = 1;
 
-      _axios.default.post(this.site_url + "app/index.php", {
+      _axios.default.post("/email.php", {
         formData: this.formData
       }).then(function (response) {});
 
@@ -13566,58 +13568,6 @@ exports.default = _default;
                           return
                         }
                         _vm.$set(_vm.formData, "email", $event.target.value)
-                      }
-                    }
-                  })
-                ])
-              ]),
-              _vm._v(" "),
-              _c("li", { staticClass: "col-sm-12" }, [
-                _c("label", [
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.formData.first_name,
-                        expression: "formData.first_name"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { type: "text", placeholder: "Subject first_name" },
-                    domProps: { value: _vm.formData.first_name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(
-                          _vm.formData,
-                          "first_name",
-                          $event.target.value
-                        )
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("input", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.formData.name,
-                        expression: "formData.name"
-                      }
-                    ],
-                    staticClass: "form-control",
-                    attrs: { type: "text", placeholder: "Subject name" },
-                    domProps: { value: _vm.formData.name },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(_vm.formData, "name", $event.target.value)
                       }
                     }
                   })
@@ -14327,18 +14277,11 @@ var _eventBus = require("../../assets/js/event-bus.js");
 var _default = {
   name: "AboutMe",
   props: ['WebSiteData'],
-  metaInfo: {
-    title: 'Full stack developer PHP in South Florida',
-    // set a title
-    htmlAttrs: {
-      lang: 'en',
-      amp: undefined // "amp" has no value
-
-    }
-  },
   data: function data() {
     return {
-      showPage: 'tab-pane fade in active'
+      showPage: 'tab-pane fade in active',
+      metaTitle: this.WebSiteData.about_me[0].meta_title,
+      metaDescription: this.WebSiteData.about_me[0].meta_description
     };
   },
   created: function created() {
@@ -14351,6 +14294,16 @@ var _default = {
     gtag('config', 'GA_MEASUREMENT_ID_1', {
       'page_path': '/'
     });
+  },
+  metaInfo: function metaInfo() {
+    return {
+      title: this.metaTitle,
+      meta: [{
+        vmid: 'description',
+        name: 'description',
+        content: this.metaDescription
+      }]
+    };
   }
 };
 exports.default = _default;
@@ -14633,9 +14586,17 @@ var _eventBus = require("../../assets/js/event-bus.js");
 var _default = {
   props: ['WebSiteData'],
   name: "Resume",
+  // metaInfo: {
+  //     title: this.WebSiteData.resume[0].meta_title,
+  //     meta: [
+  //         { vmid: 'description', name: 'description', content: this.WebSiteData.resume[0].meta_description }
+  //     ]
+  // },
   data: function data() {
     return {
-      showPage: 1
+      showPage: 1,
+      metaTitle: this.WebSiteData.resume[0].meta_title,
+      metaDescription: this.WebSiteData.resume[0].meta_description
     };
   },
   created: function created() {
@@ -14648,6 +14609,16 @@ var _default = {
     gtag('config', 'GA_MEASUREMENT_ID_2', {
       'page_path': '/resume'
     });
+  },
+  metaInfo: function metaInfo() {
+    return {
+      title: this.metaTitle,
+      meta: [{
+        vmid: 'description',
+        name: 'description',
+        content: this.metaDescription
+      }]
+    };
   }
 };
 exports.default = _default;
@@ -14866,7 +14837,9 @@ var _default = {
   data: function data() {
     return {
       show: false,
-      className: 'portfolio-image background1'
+      className: 'portfolio-image background1',
+      metaTitle: this.WebSiteData.portfolio[0].meta_title,
+      metaDescription: this.WebSiteData.portfolio[0].meta_description
     };
   },
   watch: {
@@ -14881,6 +14854,16 @@ var _default = {
     sites_url: function sites_url(url) {
       return "http://" + url;
     }
+  },
+  metaInfo: function metaInfo() {
+    return {
+      title: this.metaTitle,
+      meta: [{
+        vmid: 'description',
+        name: 'description',
+        content: this.metaDescription
+      }]
+    };
   }
 };
 exports.default = _default;
@@ -17116,7 +17099,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54139" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55079" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);

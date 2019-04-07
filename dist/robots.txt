@@ -4,5 +4,3 @@ Disallow: /assets
 Disallow: /components
 Disallow: /node_modules
 Disallow: /vendor
-Disallow: .env
-Disallow: /app/

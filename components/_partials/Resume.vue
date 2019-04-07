@@ -67,16 +67,21 @@
 
     import { EventBus } from '../../assets/js/event-bus.js';
 
-
-
     export default {
         props: ['WebSiteData'],
         name: "Resume",
-
+        // metaInfo: {
+        //     title: this.WebSiteData.resume[0].meta_title,
+        //     meta: [
+        //         { vmid: 'description', name: 'description', content: this.WebSiteData.resume[0].meta_description }
+        //     ]
+        // },
         data: function () {
 
             return {
-                showPage: 1
+                showPage: 1,
+                metaTitle: this.WebSiteData.resume[0].meta_title,
+                metaDescription: this.WebSiteData.resume[0].meta_description,
             }
         },
         created() {
@@ -89,6 +94,15 @@
             gtag('config', 'GA_MEASUREMENT_ID_2', {
                 'page_path': '/resume'
             });
+        },
+        metaInfo() {
+            return {
+                title: this.metaTitle,
+                meta: [
+                    { vmid: 'description', name: 'description', content: this.metaDescription }
+                ]
+            }
+
         }
     }
 </script>

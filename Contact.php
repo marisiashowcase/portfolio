@@ -5,7 +5,7 @@
  * Date: 2/18/19
  * Time: 5:25 PM
  */
-
+require __DIR__.'/vendor/autoload.php';
 
 use Illuminate\Database\Capsule\Manager as Capsule;
 use Carbon\Carbon;
@@ -15,7 +15,7 @@ use PHPMailer\PHPMailer\Exception;
 class Contact
 {
 
-    protected $fillable = ['name', 'email', 'message', 'ip_address', 'possible_spam', 'created_at'];
+    protected $fillable = ['email', 'message', 'ip_address', 'possible_spam', 'created_at'];
 
     public function __construct(){
 
@@ -65,7 +65,7 @@ class Contact
 
         $this->saveDB();
 
-        if(!$this->spam_detected)
+//        if(!$this->spam_detected)
            echo $this->send();
 
     }
@@ -74,7 +74,7 @@ class Contact
     public function send(){
 
         $content = "<table>";
-            $content .= "<tr><td width='100'>Name</td><td>{$this->request_override['name']}</td></tr>";
+
             $content .= "<tr><td>Email</td><td>{$this->request_override['email']}</td></tr>";
             $content .= "<tr><td>Message</td><td>{$this->request_override['message']}</td></tr>";
 

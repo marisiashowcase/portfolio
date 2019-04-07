@@ -118,17 +118,12 @@
     export default {
         name: "AboutMe",
         props: ['WebSiteData'],
-        metaInfo: {
-            title: 'Full stack developer PHP in South Florida', // set a title
-            htmlAttrs: {
-                lang: 'en',
-                amp: undefined // "amp" has no value
-            }
-        },
         data: function () {
 
             return {
-                showPage: 'tab-pane fade in active'
+                showPage: 'tab-pane fade in active',
+                metaTitle: this.WebSiteData.about_me[0].meta_title,
+                metaDescription: this.WebSiteData.about_me[0].meta_description,
             }
         },
         created() {
@@ -138,9 +133,19 @@
                 this.showPage = data.about_me? 'tab-pane fade in active':'tab-pane fade in '
             });
 
+
             gtag('config', 'GA_MEASUREMENT_ID_1', {
                 'page_path': '/'
             });
+        },
+        metaInfo() {
+            return {
+                    title: this.metaTitle,
+                    meta: [
+                        { vmid: 'description', name: 'description', content: this.metaDescription }
+                    ]
+            }
+
         }
     }
 </script>

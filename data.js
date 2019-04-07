@@ -1,3 +1,8 @@
+let about_me_description = 'Web developer with PHP, MySql, Javascript, Vue.js, API, MVS, Ajax, JSON, XML experience in South Florida, Broward county.';
+let experience_description = 'PHP Web developer with custom programming experience in a variety of industries in South Florida.';
+let portfolio_description = 'Motivated Web Developer with proven experience building web applications in South Florida.';
+
+
 const website_data = {
 
     'site_url': 'http://themcdeveloper.com/',
@@ -13,6 +18,8 @@ const website_data = {
     }],
 
     'about_me' : [{
+        'meta_title': 'Full Stack PHP Developer - About Me',
+        'meta_description': about_me_description,
         'main_paragraph': 'Self-motivated web developer passionate in creating user-friendly experiences utilizing a mix of both frontend and backend technologies. Through my eagerness to learn and share what I learn, I have been able to successfully deploy several projects from ideas to fully functional platforms. ',
 
         'services': [
@@ -50,6 +57,8 @@ const website_data = {
     }],
 
     'resume' : [{
+        'meta_title': 'Full Stack PHP Developer - Experience',
+        'meta_description': experience_description,
         'jobs': [
 
             {'date': '2019 - Present', 'company': 'SCI Direct', 'location':'Plantation, FL', 'my_title': 'PHP Developer',
@@ -112,6 +121,10 @@ const website_data = {
 
 
         ],
+        {
+            'meta_title': 'Full Stack PHP Developer - Portfolio',
+            'meta_description': portfolio_description,
+        }
     ]
 };
 

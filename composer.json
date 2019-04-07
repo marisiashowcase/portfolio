@@ -6,6 +6,6 @@
     "phpmailer/phpmailer": "^6.0"
   },
   "autoload": {
-    "files": ["dist/app/DBConnection.php"]
+    "files": ["DBConnection.php"]
   }
 }
