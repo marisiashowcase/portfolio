@@ -1,6 +1,6 @@
-let about_me_description = 'Web developer with PHP, MySql, Javascript, Vue.js, API, MVS, Ajax, JSON, XML experience in South Florida, Broward county.';
-let experience_description = 'PHP Web developer with custom programming experience in a variety of industries in South Florida.';
-let portfolio_description = 'Motivated Web Developer with proven experience building web applications in South Florida.';
+let about_me_description = 'Web developer, coder, freelancer with PHP, Laravel, MySql, Javascript, Vue.js, API, MVC, Ajax, JSON, XML, ecommerce, amazon, PDF, CSV, web scraping, web crawling  experience in South Florida, Broward county.';
+let experience_description = 'Web developer, coder, freelancer with custom programming, custom ecommerce, PDF, CSV, web scraping, web crawling, database experience in a variety of industries in South Florida, Broward county.';
+let portfolio_description = 'Motivated Web developer, coder, freelancer with proven experience building web applications in South Florida, Broward county.';
 
 
 const website_data = {

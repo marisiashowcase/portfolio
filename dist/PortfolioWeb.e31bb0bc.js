@@ -11071,9 +11071,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-var about_me_description = 'Web developer with PHP, MySql, Javascript, Vue.js, API, MVS, Ajax, JSON, XML experience in South Florida, Broward county.';
-var experience_description = 'PHP Web developer with custom programming experience in a variety of industries in South Florida.';
-var portfolio_description = 'Motivated Web Developer with proven experience building web applications in South Florida.';
+var about_me_description = 'Web developer, coder, freelancer with PHP, Laravel, MySql, Javascript, Vue.js, API, MVC, Ajax, JSON, XML, ecommerce, amazon, PDF, CSV, web scraping, web crawling  experience in South Florida, Broward county.';
+var experience_description = 'Web developer, coder, freelancer with custom programming, custom ecommerce, PDF, CSV, web scraping, web crawling, database experience in a variety of industries in South Florida, Broward county.';
+var portfolio_description = 'Motivated Web developer, coder, freelancer with proven experience building web applications in South Florida, Broward county.';
 var website_data = {
   'site_url': 'http://themcdeveloper.com/',
   'my_details': [{
