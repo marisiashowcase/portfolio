@@ -3,7 +3,8 @@
     "illuminate/database": "^5.7",
     "vlucas/phpdotenv": "^3.3",
     "nesbot/carbon": "^1.36",
-    "phpmailer/phpmailer": "^6.0"
+    "phpmailer/phpmailer": "^6.0",
+    "themsaid/forge-sdk": "^2.0"
   },
   "autoload": {
     "files": ["DBConnection.php"]

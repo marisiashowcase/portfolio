@@ -7,7 +7,7 @@
 
         <div :class="divProfessionalClass">
 
-            <img src="../assets/images/avatar-5.jpg" class="img-responsive" alt="">
+            <img src="../assets/images/avatar-1.jpg" class="img-responsive" alt="">
             <ul class="personal-info">
                 <li>
                     <p> <span> Name</span> {{ WebSiteData.my_details[0].full_name }} </p>

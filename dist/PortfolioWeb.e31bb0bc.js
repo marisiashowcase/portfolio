@@ -13451,7 +13451,7 @@ exports.default = _default;
     _c("div", { class: _vm.divProfessionalClass }, [
       _c("img", {
         staticClass: "img-responsive",
-        attrs: { src: "/avatar-5.52987c0c.jpg", alt: "" }
+        attrs: { src: "/avatar-1.24ff6fc2.jpg", alt: "" }
       }),
       _vm._v(" "),
       _c("ul", { staticClass: "personal-info" }, [
@@ -13728,7 +13728,7 @@ render._withStripped = true
       
       }
     })();
-},{"axios":"node_modules/axios/index.js","./../assets/images/avatar-5.jpg":[["avatar-5.52987c0c.jpg","assets/images/avatar-5.jpg"],"assets/images/avatar-5.jpg"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"assets/js/event-bus.js":[function(require,module,exports) {
+},{"axios":"node_modules/axios/index.js","./../assets/images/avatar-1.jpg":[["avatar-1.24ff6fc2.jpg","assets/images/avatar-1.jpg"],"assets/images/avatar-1.jpg"],"_css_loader":"../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/css-loader.js","vue-hot-reload-api":"node_modules/vue-hot-reload-api/dist/index.js","vue":"node_modules/vue/dist/vue.runtime.esm.js"}],"assets/js/event-bus.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -17099,7 +17099,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55079" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62357" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
