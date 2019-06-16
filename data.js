@@ -24,7 +24,7 @@ const website_data = {
 
         'services': [
             {'title': 'WEB DEVELOPMENT', 'description': 'Created dynamic, high-speed, responsive websites. Well versed with technologies like Vue.js & jQuery', 'icon':'fa fa-globe'},
-            {'title': 'DATABASE MANAGEMENT', 'description': 'Proficient with DB management with efficiently organizing, recording and implementing data sets.', 'icon':'fa fa-database'},
+            {'title': 'DATABASE MANAGEMENT', 'description': 'Proficient with MySQL database management with efficiently organizing, recording and implementing data sets.', 'icon':'fa fa-database'},
             {'title': 'e-commerce', 'description': 'Ecommerce solution provider. Professional designer, developer & integrator of ecommerce functionalities. ', 'icon':'fa fa-shopping-cart'},
             {'title': 'systems automation', 'description': 'Substantial knowledge over the system automation process. Planned, developed and executed several projects. ', 'icon':'fa fa-cogs'},
             {'title': 'front end development', 'description': 'Specialized in creating clean, compact & compliant front ends. Successfully prototyped myriad of websites.', 'icon':'fa fa-html5'},

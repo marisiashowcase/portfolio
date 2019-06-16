@@ -11095,7 +11095,7 @@ var website_data = {
       'icon': 'fa fa-globe'
     }, {
       'title': 'DATABASE MANAGEMENT',
-      'description': 'Proficient with DB management with efficiently organizing, recording and implementing data sets.',
+      'description': 'Proficient with MySQL database management with efficiently organizing, recording and implementing data sets.',
       'icon': 'fa fa-database'
     }, {
       'title': 'e-commerce',
@@ -17099,7 +17099,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62357" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61483" + '/');
 
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
